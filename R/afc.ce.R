@@ -19,7 +19,7 @@ afc.ce = function(obsv,fcst){
   ranks = rank.ensembles(fcst)
 
   # Apply Eq. 22 in MW09
-  p.afc = 0.5*(1+cor(ranks,obsv,method="kendall"))
+  p.afc = 0.5*(1+stats::cor(ranks,obsv,method="kendall"))
   type.flag = 1
   return(p.afc)
 
