@@ -1,0 +1,12 @@
+Package: afc
+Version: 1.04
+Date: 2017-02-22
+Title: Generalized Discrimination Score
+Authors@R: c(person("Andreas", "Weigel", email="", role = "aut"),
+  person("MeteoSwiss", "", email="syscat@meteoswiss.ch", role=c('cre', 'cph')),
+  person("Jonas", "Bhend", email="jonas.bhend@meteoswiss.ch", role = 'aut'))
+Description: Implementation of the Generalized Discrimination Score
+    (also known as Two Alternatives Forced Choice Score, 2AFC) for
+    various representations of forecasts and verifying observations
+License: GPL-3
+RoxygenNote: 5.0.1
