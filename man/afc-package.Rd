@@ -40,35 +40,62 @@ discrete.
 
 \tabular{ll}{ Package: \tab afc\cr Version: \tab 1.03\cr Date: \tab
 2010-01-07\cr License: \tab GPL-2\cr }
-
-Index: \preformatted{ afc Calculate Generalized Discrimination Score 2AFC
-afc-package Generalized Discrimination Score 2AFC afc.cc 2AFC For Continuous
-Observations And Continuous Forecasts afc.ce 2AFC For Ordinal Polychotomous
-Observations And Ensemble Forecasts afc.dc 2AFC For Dichotomous Observations
-And Continuous Forecasts afc.dd 2AFC For Dichotomous Observations And
-Dichotomous Forecasts afc.de 2AFC for Dichotomous Observations and Ensemble
-Forecasts afc.dm 2AFC For Dichotomous Observations And Polychotomous
-Forecasts afc.dp 2AFC For Dichotomous Observations And Probabilistic
-Forecasts afc.mc 2AFC For Ordinal Polychotomous Observations And Continuous
-Forecasts afc.me 2AFC For Ordinal Polychotomous Observations And Ensemble
-Forecasts afc.mm 2AFC For Ordinal Polychotomous Observations And Ordinal
-Polychotomous Forecasts afc.mp 2AFC For Ordinal Polychotomous Observations
-And Probabilistic Forecasts afc.nn 2AFC For Nominal Polychotomous
-Observations And Nominal Polychotomous Forecasts afc.np 2AFC For Nominal
-Polychotomous Observations Ans Probabilistic Forecasts cnrm.nino34.cc
-Example Data of Continuous Observations and Continuous Forecasts
-cnrm.nino34.ce Example Data of Continuous Observations and Ensemble
-Forecasts cnrm.nino34.dc Example Data of Dichotomous Observations and
-Continuous Forecasts cnrm.nino34.dd Example Data of Dichotomous Observations
-and Dichotomous Forecasts cnrm.nino34.de Example Data of Dichotomous
-Observations and Ensemble Forecasts cnrm.nino34.dm Example Data of
-Dichotomous Observations and Polychotomous Forecasts cnrm.nino34.dp Example
-Data of Dichotomous Observations and Polychotomous Forecasts cnrm.nino34.mc
-Example Data of Polychotomous Observations and Continuous Forecasts
-cnrm.nino34.me Example Data of Polychotomous Observations and Ensembles
-Forecasts cnrm.nino34.mm Example Data of Polychotomous Observations and
-Polychotomous Forecasts cnrm.nino34.mp Example Data of Polychotomous
-Observations and Probabilistic Forecasts rank.ensembles Rank Ensembles }
+}
+\section{Index}{
+ 
+\preformatted{
+afc                     Calculate Generalized Discrimination Score 2AFC
+afc-package             Generalized Discrimination Score 2AFC
+afc.cc                  2AFC For Continuous Observations And Continuous 
+                        Forecasts
+afc.ce                  2AFC For Ordinal Polychotomous Observations And
+                        Ensemble Forecasts
+afc.dc                  2AFC For Dichotomous Observations And
+                        Continuous Forecasts
+afc.dd                  2AFC For Dichotomous Observations And
+                        Dichotomous Forecasts
+afc.de                  2AFC for Dichotomous Observations and Ensemble
+                        Forecasts
+afc.dm                  2AFC For Dichotomous Observations And
+                        Polychotomous Forecasts
+afc.dp                  2AFC For Dichotomous Observations And
+                        Probabilistic Forecasts
+afc.mc                  2AFC For Ordinal Polychotomous Observations And
+                        Continuous Forecasts
+afc.me                  2AFC For Ordinal Polychotomous Observations And
+                        Ensemble Forecasts
+afc.mm                  2AFC For Ordinal Polychotomous Observations And
+                        Ordinal Polychotomous Forecasts
+afc.mp                  2AFC For Ordinal Polychotomous Observations And
+                        Probabilistic Forecasts
+afc.nn                  2AFC For Nominal Polychotomous Observations And
+                        Nominal Polychotomous Forecasts
+afc.np                  2AFC For Nominal Polychotomous Observations And
+                        Probabilistic Forecasts
+cnrm.nino34.cc          Example Data of Continuous Observations and
+                        Continuous Forecasts
+cnrm.nino34.ce          Example Data of Continuous Observations and 
+                        Ensemble Forecasts
+cnrm.nino34.dc          Example Data of Dichotomous Observations and
+                        Continuous Forecasts
+cnrm.nino34.dd          Example Data of Dichotomous Observations and
+                        Dichotomous Forecasts
+cnrm.nino34.de          Example Data of Dichotomous Observations and
+                        Ensemble Forecasts
+cnrm.nino34.dm          Example Data of Dichotomous Observations and
+                        Polychotomous Forecasts
+cnrm.nino34.dp          Example Data of Dichotomous Observations and
+                        Polychotomous Forecasts
+cnrm.nino34.mc          Example Data of Polychotomous Observations and
+                        Continuous Forecasts
+cnrm.nino34.me          Example Data of Polychotomous Observations and
+                        Ensembles Forecasts
+cnrm.nino34.mm          Example Data of Polychotomous Observations and
+                        Polychotomous Forecasts
+cnrm.nino34.mp          Example Data of Polychotomous Observations and
+                        Probabilistic Forecasts
+rank.ensembles          Rank Ensembles
+}
 }
 \author{
 Andreas Weigel, Federal Office of Meteorology and Climatology
