@@ -45,7 +45,7 @@ afc.cc = function(obsv,fcst){
 
   
   # Apply Eq. 22 in MW09
-  p.afc = 0.5*(1+cor(fcst,obsv,method="kendall"))
+  p.afc = 0.5*(1+stats::cor(fcst,obsv,method="kendall"))
   type.flag = 1
   return(p.afc)
 
