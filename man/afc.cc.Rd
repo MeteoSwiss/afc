@@ -34,10 +34,6 @@ This routine applies Eq.22 of Mason and Weigel (2009) to calculate the 2AFC.
   afc.cc(obsv,fcst)
 
 }
-\author{
-Andreas Weigel, Federal Office of Meteorology and Climatology,
-MeteoSwiss, Zurich, Switzerland
-}
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification
 framework for administrative purposes. Mon. Wea. Rev., 137, 331-349
@@ -45,5 +41,8 @@ framework for administrative purposes. Mon. Wea. Rev., 137, 331-349
 \seealso{
 \code{\link{afc}}
 }
+\author{
+Andreas Weigel, Federal Office of Meteorology and Climatology,
+MeteoSwiss, Zurich, Switzerland
+}
 \keyword{file}
-

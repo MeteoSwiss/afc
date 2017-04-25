@@ -36,10 +36,6 @@ the final ranking is obtained.
   rank.ensembles(fcst)
 
 }
-\author{
-Andreas Weigel, Federal Office of Meteorology and Climatology,
-MeteoSwiss, Zurich, Switzerland
-}
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification
 framework for administrative purposes. Mon. Wea. Rev., 137, 331-349
@@ -48,5 +44,8 @@ framework for administrative purposes. Mon. Wea. Rev., 137, 331-349
 \code{\link{afc.de}} \code{\link{afc.me}} \code{\link{afc.ce}}
 \code{\link{afc}}
 }
+\author{
+Andreas Weigel, Federal Office of Meteorology and Climatology,
+MeteoSwiss, Zurich, Switzerland
+}
 \keyword{file}
-

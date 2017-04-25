@@ -28,4 +28,3 @@ generic forecast verification framework for administrative purposes. Mon.
 Wea. Rev., 137, 331-349
 }
 \keyword{datasets}
-

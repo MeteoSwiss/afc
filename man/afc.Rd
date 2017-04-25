@@ -239,10 +239,6 @@ length(obsv); dim(fcst)[2] = ensemble size.\cr
   afc(obsv, fcst, obsv.type="c", fcst.type="e")
 
 }
-\author{
-Andreas Weigel, Federal Office of Meteorology and Climatology,
-MeteoSwiss, Zurich, Switzerland
-}
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification
 framework for administrative purposes. Mon. Wea. Rev., 137, 331-349
@@ -254,5 +250,8 @@ framework for administrative purposes. Mon. Wea. Rev., 137, 331-349
 \code{\link{afc.nn}} \code{\link{afc.np}} \code{\link{afc.cc}}
 \code{\link{afc.ce}}
 }
+\author{
+Andreas Weigel, Federal Office of Meteorology and Climatology,
+MeteoSwiss, Zurich, Switzerland
+}
 \keyword{file}
-

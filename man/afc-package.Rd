@@ -97,14 +97,14 @@ cnrm.nino34.mp          Example Data of Polychotomous Observations and
 rank.ensembles          Rank Ensembles
 }
 }
-\author{
-Andreas Weigel, Federal Office of Meteorology and Climatology
-(MeteoSwiss), Zurich, Switzerland <andreas.weigel@meteoswiss.ch>
-}
+
 \references{
 Mason, S.J. and A.P. Weigel, 2009: A generic forecast
 verification framework for administrative purposes. Mon. Wea. Rev., 137,
 331-349
 }
+\author{
+Andreas Weigel, Federal Office of Meteorology and Climatology
+(MeteoSwiss), Zurich, Switzerland <andreas.weigel@meteoswiss.ch>
+}
 \keyword{package}
-
