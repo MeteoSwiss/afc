@@ -4,9 +4,11 @@
 \name{cnrm.nino34.de}
 \alias{cnrm.nino34.de}
 \title{Example Data of Dichotomous Observations and Ensemble Forecasts}
-\format{The format is: List of 3 \cr \$ years: int [1:40] 1961 1962 1963
+\format{
+The format is: List of 3 \cr \$ years: int [1:40] 1961 1962 1963
 1964 1965 1966 1967 1968 1969 1970 ...\cr \$ obsv : num [1:40] 0 0 0 1 0 1 0
-0 1 1 ...\cr \$ fcst : num [1:40, 1:9] 26.5 25.9 27.0 27.5 25.8 ...}
+0 1 1 ...\cr \$ fcst : num [1:40, 1:9] 26.5 25.9 27.0 27.5 25.8 ...
+}
 \description{
 Dichotomous observations (obsv) and 9-member ensemble forecasts (fcst) of
 the Nino-3.4 index for January 1961-2000. The forecast data stem from model

@@ -18,7 +18,7 @@ Mason and Weigel (2009).
 The master routine is \code{\link{afc}}. For a given set of observation and
 forecast data, and for a specified verification context, \code{\link{afc}}
 calls the appropriate functions which are necessary to calculate the 2AFC
-score.
+score. 
 
 Why the 2AFC-score? There are numerous reasons for calculating forecast
 verification scores, and considerable attention has been given to designing

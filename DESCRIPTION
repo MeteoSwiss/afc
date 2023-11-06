@@ -1,5 +1,5 @@
 Package: afc
-Version: 1.0.5
+Version: 1.1.0
 Date: 2017-04-25
 Title: Generalized Discrimination Score
 Authors@R: c(person("Andreas", "Weigel", email="", role = "aut"),
@@ -14,4 +14,4 @@ Description: This is an implementation of the Generalized Discrimination Score
     A comprehensive description of the Generalized Discrimination Score, including 
     all equations used in this package, is provided by Mason and Weigel (2009).
 License: GPL-3
-RoxygenNote: 6.0.1
+RoxygenNote: 7.2.3

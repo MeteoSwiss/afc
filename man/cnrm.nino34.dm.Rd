@@ -4,9 +4,11 @@
 \name{cnrm.nino34.dm}
 \alias{cnrm.nino34.dm}
 \title{Example Data of Dichotomous Observations and Polychotomous Forecasts}
-\format{The format is:\cr List of 3\cr \$ years: int [1:40] 1961 1962 1963
+\format{
+The format is:\cr List of 3\cr \$ years: int [1:40] 1961 1962 1963
 1964 1965 1966 1967 1968 1969 1970 ...\cr \$ obsv : num [1:40] 0 0 0 1 0 1 0
-0 1 1 ...\cr \$ fcst : num [1:40] 2 2 2 3 1 4 2 2 3 3 ...}
+0 1 1 ...\cr \$ fcst : num [1:40] 2 2 2 3 1 4 2 2 3 3 ...
+}
 \description{
 Dichotomous observations (obsv) and polychotomous forecasts with four
 categories (fcst) of the Nino-3.4 index for January 1961-2000. The forecast
