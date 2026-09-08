@@ -5,9 +5,14 @@
 \alias{cnrm.nino34.dp}
 \title{Example Data of Dichotomous Observations and Probabilistic Forecasts}
 \format{
-The format is:\cr List of 3\cr \$ years: int [1:40] 1961 1962 1963
-1964 1965 1966 1967 1968 1969 1970 ...\cr \$ obsv : num [1:40] 0 0 0 1 0 1 0
-0 1 1 ...\cr \$ fcst : num [1:40] 0.000 0.000 0.111 1.000 0.000 ...\cr
+A data frame with 40 rows and 3 columns:
+\describe{
+\item{years}{integer, year of observation (1961-2000)}
+\item{obsv}{integer, dichotomous observations (0/1; event defined as
+  Nino-3.4 index >= 27 C)}
+\item{fcst}{numeric, probabilistic forecasts (fraction of ensemble members
+  predicting the event, values in [0, 1])}
+}
 }
 \description{
 Dichotomous observations (obsv) and discrete probabilistic forecasts (fcst)

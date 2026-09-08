@@ -5,9 +5,14 @@
 \alias{cnrm.nino34.de}
 \title{Example Data of Dichotomous Observations and Ensemble Forecasts}
 \format{
-The format is: List of 3 \cr \$ years: int [1:40] 1961 1962 1963
-1964 1965 1966 1967 1968 1969 1970 ...\cr \$ obsv : num [1:40] 0 0 0 1 0 1 0
-0 1 1 ...\cr \$ fcst : num [1:40, 1:9] 26.5 25.9 27.0 27.5 25.8 ...
+A data frame with 40 rows and 3 columns:
+\describe{
+\item{years}{integer, year of observation (1961-2000)}
+\item{obsv}{integer, dichotomous observations (0/1; event defined as
+  Nino-3.4 index >= 27 C)}
+\item{fcst}{numeric matrix [40 x 9], 9-member ensemble forecasts of
+  Nino-3.4 index (degrees C)}
+}
 }
 \description{
 Dichotomous observations (obsv) and 9-member ensemble forecasts (fcst) of
