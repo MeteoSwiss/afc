@@ -1,2 +1,4 @@
-url: https://service.meteoswiss.ch/documentation/afc/latest/R/
+url: https://meteoswiss.github.io/afc/
+template:
+  bootstrap: 5
 

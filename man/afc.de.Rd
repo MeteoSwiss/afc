@@ -2,15 +2,19 @@
 % Please edit documentation in R/afc.de.R
 \name{afc.de}
 \alias{afc.de}
-\title{2AFC For Dichotomous Observations and Ensemble Forecasts}
+\title{2AFC For Dichotomous Observations And Ensemble Forecasts}
 \usage{
-afc.de(obsv, fcst)
+afc.de(obsv, fcst, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{vector with dichotomous observations (values in {0,1})}
 
 \item{fcst}{two-dimensional array with ensemble forecasts; dim(fcst)[1] =
 length(obsv); dim(fcst)[2] = ensemble size}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
@@ -26,16 +30,10 @@ This routine first ranks the ensemble forecasts (see
 of Mason and Weigel (2009).
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of dichotomous observations and 9-member ensemble forecasts
   data(cnrm.nino34.de)
   obsv = cnrm.nino34.de$obsv
   fcst = cnrm.nino34.de$fcst
-
- #Calculate skill score
   afc.de(obsv,fcst)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

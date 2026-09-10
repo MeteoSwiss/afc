@@ -5,7 +5,7 @@
 \title{2AFC For Ordinal Polychotomous Observations And Ordinal Polychotomous
 Forecasts}
 \usage{
-afc.mm(obsv, fcst, mv = 3, mf = 3)
+afc.mm(obsv, fcst, mv = 3, mf = 3, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{vector with polychotomous observations (values in {1,..,mv})}
@@ -16,6 +16,10 @@ forecasts (values in {1,..,mf})}
 \item{mv}{number of observation categories (default = 3)}
 
 \item{mf}{number of forecast categories (default = 3)}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
@@ -29,16 +33,10 @@ polychotomous observations (ordinal) and polychotomous forecasts (ordinal)
 This routine applies Eq.14 of Mason and Weigel (2009) to calculate the 2AFC.
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of polychotomous observations (4 categories) and polychotomous forecasts (4 categories)
   data(cnrm.nino34.mm)
   obsv = cnrm.nino34.mm$obsv
   fcst = cnrm.nino34.mm$fcst
-
-  #Calculate skill score
   afc.mm(obsv,fcst,4,4)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

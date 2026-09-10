@@ -4,7 +4,7 @@
 \alias{afc.dm}
 \title{2AFC For Dichotomous Observations And Ordinal Polychotomous Forecasts}
 \usage{
-afc.dm(obsv, fcst, mf = 3)
+afc.dm(obsv, fcst, mf = 3, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{vector with dichotomous observations (values in {0,1})}
@@ -13,6 +13,10 @@ afc.dm(obsv, fcst, mf = 3)
 forecasts (values in {1,..,m})}
 
 \item{mf}{number of forecast categories (default = 3)}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
@@ -27,16 +31,10 @@ This routine applies Eq.5 of in Mason and Weigel (2009) to calculate the
 2AFC.
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of dichotomous observations and polychotomous forecasts (4 categories)
   data(cnrm.nino34.dm)
   obsv = cnrm.nino34.dm$obsv
   fcst = cnrm.nino34.dm$fcst
-
-  #Calculate skill score
   afc.dm(obsv,fcst,4)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

@@ -4,13 +4,17 @@
 \alias{afc.dd}
 \title{2AFC For Dichotomous Observations And Dichotomous Forecasts}
 \usage{
-afc.dd(obsv, fcst)
+afc.dd(obsv, fcst, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{vector with dichotomous observations (values in {0,1})}
 
 \item{fcst}{vector of same length as \emph{obsv} with dichotomous forecasts
 (values in {0,1})}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
@@ -24,16 +28,10 @@ observations and dichotomous forecasts
 This routine applies Eq.2 of Mason and Weigel (2009) to calculate the 2AFC.
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of dichotomous observations and dichotomous forecasts
   data(cnrm.nino34.dd)
   obsv = cnrm.nino34.dd$obsv
   fcst = cnrm.nino34.dd$fcst
-
-  #Calculate skill score
   afc.dd(obsv,fcst)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

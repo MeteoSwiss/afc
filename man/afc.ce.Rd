@@ -4,13 +4,17 @@
 \alias{afc.ce}
 \title{2AFC For Continuous Observations And Ensemble Forecasts}
 \usage{
-afc.ce(obsv, fcst)
+afc.ce(obsv, fcst, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{vector with real-valued observations}
 
-\item{fcst}{two-dimensional array with ensemble forecasts; dim(fcst)[1] =
-length(obsv); dim(fcst)[2] = ensemble size}
+\item{fcst}{two-dimensional array with ensemble forecasts;
+dim(fcst)[1] = length(obsv); dim(fcst)[2] = ensemble size}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
@@ -21,28 +25,20 @@ Two-Alternatives Forced Choice Score 2AFC) for the situation of continuous
 observations and ensemble forecasts
 }
 \details{
-This routine first ranks the ensemble forecasts (see
-\code{\link{rank.ensembles}}) and then calculates the 2AFC-score with Eq.22
-of Mason and Weigel (2009).
+This routine applies Eq.24 of Mason and Weigel (2009) to calculate the 2AFC.
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of continuous observations and 9-member ensemble forecasts
   data(cnrm.nino34.ce)
   obsv = cnrm.nino34.ce$obsv
   fcst = cnrm.nino34.ce$fcst
-
-  #Calculate skill score
   afc.ce(obsv,fcst)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification
 framework for administrative purposes. Mon. Wea. Rev., 137, 331-349
 }
 \seealso{
-\code{\link{afc}} \code{\link{rank.ensembles}}
+\code{\link{afc}}
 }
 \author{
 Andreas Weigel, Federal Office of Meteorology and Climatology,

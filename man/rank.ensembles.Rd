@@ -27,14 +27,9 @@ Eq. 8 of Mason and Weigel (2009). By pairwise comparison of all ensembles,
 the final ranking is obtained.
 }
 \examples{
-
-  #Load a set of ensemble forecasts
   data(cnrm.nino34.ce)
   fcst = cnrm.nino34.ce$fcst
-
-  #Rank ensemble forecasts
   rank.ensembles(fcst)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

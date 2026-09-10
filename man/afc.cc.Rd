@@ -4,12 +4,16 @@
 \alias{afc.cc}
 \title{2AFC For Continuous Observations And Continuous Forecasts}
 \usage{
-afc.cc(obsv, fcst)
+afc.cc(obsv, fcst, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{vector with real-valued observations}
 
 \item{fcst}{vector of same length as \emph{obsv} with real-valued forecasts}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
@@ -23,16 +27,10 @@ observations and continuous forecasts
 This routine applies Eq.22 of Mason and Weigel (2009) to calculate the 2AFC.
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of continuous observations and continuous forecasts
   data(cnrm.nino34.cc)
   obsv = cnrm.nino34.cc$obsv
   fcst = cnrm.nino34.cc$fcst
-
-  #Calculate skill score
   afc.cc(obsv,fcst)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

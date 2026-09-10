@@ -4,7 +4,7 @@
 \alias{afc.mc}
 \title{2AFC For Ordinal Polychotomous Observations And Continuous Forecasts}
 \usage{
-afc.mc(obsv, fcst, m = 3)
+afc.mc(obsv, fcst, m = 3, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{vector with polychotomous observations (values in {1,..,m})}
@@ -12,6 +12,10 @@ afc.mc(obsv, fcst, m = 3)
 \item{fcst}{vector of same length as \emph{obsv} with real-valued forecasts}
 
 \item{m}{number of observation categories (default = 3)}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
@@ -25,16 +29,10 @@ polychotomous observations (ordinal) and continuous forecasts
 This routine applies Eq.18 of Mason and Weigel (2009) to calculate the 2AFC.
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of polychotomous observations (4 categories) and continuous forecasts
   data(cnrm.nino34.mc)
   obsv = cnrm.nino34.mc$obsv
   fcst = cnrm.nino34.mc$fcst
-
-  #Calculate skill score
   afc.mc(obsv,fcst,4)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

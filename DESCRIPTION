@@ -1,9 +1,9 @@
 Package: afc
-Version: 1.1.1
+Version: 1.2.0
 Date: 2026-09-08
 Title: Generalized Discrimination Score
 Authors@R: c(person("Andreas", "Weigel", email="", role = "aut"),
-  person("MeteoSwiss", "", email="syscat@meteoswiss.ch", role=c('cph')),
+  person("MeteoSwiss", "", role=c('cph')),
   person("Jonas", "Bhend", email="jonas.bhend@meteoswiss.ch", role = c('cre', 'aut')))
 Description: This is an implementation of the Generalized Discrimination Score
     (also known as Two Alternatives Forced Choice Score, 2AFC) for various 
@@ -13,5 +13,10 @@ Description: This is an implementation of the Generalized Discrimination Score
     polychotomous (ordinal and nominal), continuous, probabilistic, and ensemble.
     A comprehensive description of the Generalized Discrimination Score, including 
     all equations used in this package, is provided by Mason and Weigel (2009).
-License: GPL-3
+License: BSD_3_clause + file LICENSE
 RoxygenNote: 7.2.3
+URL: https://meteoswiss.github.io/afc/
+Encoding: UTF-8
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3

@@ -5,7 +5,7 @@
 \title{2AFC For Nominal Polychotomous Observations And Nominal Polychotomous
 Forecasts}
 \usage{
-afc.nn(obsv, fcst, m = 3)
+afc.nn(obsv, fcst, m = 3, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{vector with polychotomous observations (values in {1,..,m})}
@@ -14,29 +14,27 @@ afc.nn(obsv, fcst, m = 3)
 forecasts (values in {1,..,m})}
 
 \item{m}{number of observation and forecast categories (default = 3)}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
 }
 \description{
 Routine to calculate the Generalized Discrimination Score (aka
-Two-Alternatives Forced Choice Score 2AFC) for the situation of
-polychotomous observations (nominal) and polychotomous forecasts (nominal)
+Two-Alternatives Forced Choice Score 2AFC) for the situation of nominal
+polychotomous observations and polychotomous forecasts (nominal)
 }
 \details{
 This routine applies Eq.15 of Mason and Weigel (2009) to calculate the 2AFC.
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of polychotomous observations and polychotomous forecasts (4 categories)
   data(cnrm.nino34.mm)
   obsv = cnrm.nino34.mm$obsv
   fcst = cnrm.nino34.mm$fcst
-
-  #Calculate skill score
   afc.nn(obsv,fcst,4)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification
