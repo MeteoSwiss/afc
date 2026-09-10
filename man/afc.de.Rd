@@ -7,7 +7,7 @@
 afc.de(obsv, fcst, na.rm = FALSE)
 }
 \arguments{
-\item{obsv}{vector with dichotomous observations (values in {0,1})}
+\item{obsv}{vector with dichotomous observations (values in \{0,1\})}
 
 \item{fcst}{two-dimensional array with ensemble forecasts; dim(fcst)[1] =
 length(obsv); dim(fcst)[2] = ensemble size}

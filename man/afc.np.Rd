@@ -7,7 +7,7 @@
 afc.np(obsv, fcst, m = 3, na.rm = FALSE)
 }
 \arguments{
-\item{obsv}{vector with polychotomous observations (values in {1,..,m})}
+\item{obsv}{vector with polychotomous observations (values in \{1,..,m\})}
 
 \item{fcst}{two-dimensional array with forecast probabilities for the m
 categories; dim(fcst)[1] = length(obsv); dim(fcst)[2] = m}

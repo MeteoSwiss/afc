@@ -6,9 +6,9 @@
 #'
 #' This routine applies Eq.2 of Mason and Weigel (2009) to calculate the 2AFC.
 #'
-#' @param obsv vector with dichotomous observations (values in {0,1})
+#' @param obsv vector with dichotomous observations (values in \{0,1\})
 #' @param fcst vector of same length as \emph{obsv} with dichotomous forecasts
-#' (values in {0,1})
+#' (values in \{0,1\})
 #' @param na.rm logical; if \code{TRUE} pairs where \code{obsv} or
 #'   \code{fcst} is \code{NA} are removed before scoring. Default
 #'   \code{FALSE} returns \code{NA} if any input contains \code{NA}.
