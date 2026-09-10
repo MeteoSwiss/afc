@@ -23,16 +23,10 @@ observations and continuous forecasts
 This routine applies Eq.8 of Mason and Weigel (2009) to calculate the 2AFC.
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of dichotomous observations and continuous forecasts
   data(cnrm.nino34.dc)
   obsv = cnrm.nino34.dc$obsv
   fcst = cnrm.nino34.dc$fcst
-
-  #Calculate skill score
   afc.dc(obsv,fcst)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

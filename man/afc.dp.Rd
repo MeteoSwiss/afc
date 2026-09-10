@@ -24,16 +24,10 @@ observations and discrete probabilistic forecasts
 This routine applies Eq.5 of Mason and Weigel (2009) to calculate the 2AFC.
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of dichotomous observations and probabilistic forecasts
   data(cnrm.nino34.dp)
   obsv = cnrm.nino34.dp$obsv
   fcst = cnrm.nino34.dp$fcst
-
-  #Calculate skill score
   afc.dp(obsv,fcst)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

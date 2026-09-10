@@ -26,16 +26,10 @@ This routine first ranks the ensemble forecasts (see
 of Mason and Weigel (2009).
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of dichotomous observations and 9-member ensemble forecasts
   data(cnrm.nino34.de)
   obsv = cnrm.nino34.de$obsv
   fcst = cnrm.nino34.de$fcst
-
- #Calculate skill score
   afc.de(obsv,fcst)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

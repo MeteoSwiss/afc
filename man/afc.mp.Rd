@@ -26,16 +26,10 @@ polychotomous observations (ordinal) and discrete probabilistic forecasts
 This routine applies Eq.16 of Mason and Weigel (2009) to calculate the 2AFC.
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of polychtomous observations (4 categories) and probabilistic forecasts
   data(cnrm.nino34.mp)
   obsv = cnrm.nino34.mp$obsv
   fcst = cnrm.nino34.mp$fcst
-
-  #Calculate skill score
   afc.mp(obsv,fcst,4)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

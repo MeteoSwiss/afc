@@ -26,16 +26,10 @@ This routine first ranks the ensemble forecasts (see
 of Mason and Weigel (2009).
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of continuous observations and 9-member ensemble forecasts
   data(cnrm.nino34.ce)
   obsv = cnrm.nino34.ce$obsv
   fcst = cnrm.nino34.ce$fcst
-
-  #Calculate skill score
   afc.ce(obsv,fcst)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification

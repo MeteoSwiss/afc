@@ -25,16 +25,10 @@ polychotomous observations (ordinal) and continuous forecasts
 This routine applies Eq.18 of Mason and Weigel (2009) to calculate the 2AFC.
 }
 \examples{
-
-  #Forecasts and observations of Nino-3.4 index
-  #Load set of polychotomous observations (4 categories) and continuous forecasts
   data(cnrm.nino34.mc)
   obsv = cnrm.nino34.mc$obsv
   fcst = cnrm.nino34.mc$fcst
-
-  #Calculate skill score
   afc.mc(obsv,fcst,4)
-
 }
 \references{
 S.J. Mason and A.P. Weigel, 2009. A generic verification
