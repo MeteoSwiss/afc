@@ -8,6 +8,9 @@
 #'
 #' @param obsv vector with real-valued observations
 #' @param fcst vector of same length as \emph{obsv} with real-valued forecasts
+#' @param na.rm logical; if \code{TRUE} pairs where \code{obsv} or
+#'   \code{fcst} is \code{NA} are removed before scoring. Default
+#'   \code{FALSE} returns \code{NA} if any input contains \code{NA}.
 #' @return \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
 #' @author Andreas Weigel, Federal Office of Meteorology and Climatology,
 #' MeteoSwiss, Zurich, Switzerland
@@ -21,7 +24,12 @@
 #'   fcst = cnrm.nino34.cc$fcst
 #'   afc.cc(obsv,fcst)
 #' @export afc.cc
-afc.cc = function(obsv,fcst){
+afc.cc = function(obsv, fcst, na.rm = FALSE) {
+  if (na.rm) {
+    d <- .complete_cases(obsv, fcst); obsv <- d$obsv; fcst <- d$fcst
+  } else if (anyNA(obsv) || anyNA(fcst)) {
+    return(NA_real_)
+  }
   p.afc = 0.5*(1+stats::cor(fcst,obsv,method="kendall"))
   type.flag = 1
   return(p.afc)

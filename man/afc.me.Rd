@@ -4,7 +4,7 @@
 \alias{afc.me}
 \title{2AFC For Ordinal Polychotomous Observations And Ensemble Forecasts}
 \usage{
-afc.me(obsv, fcst, m = 3)
+afc.me(obsv, fcst, m = 3, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{vector with polychotomous observations (values in {1,..,m})}
@@ -13,6 +13,10 @@ afc.me(obsv, fcst, m = 3)
 length(obsv); dim(fcst)[2] = ensemble size}
 
 \item{m}{number of observation categories (default = 3)}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }

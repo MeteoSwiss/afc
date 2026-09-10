@@ -11,6 +11,9 @@
 #' @param fcst vector of same length as \emph{obsv} with polychotomous
 #' forecasts (values in {1,..,m})
 #' @param mf number of forecast categories (default = 3)
+#' @param na.rm logical; if \code{TRUE} pairs where \code{obsv} or
+#'   \code{fcst} is \code{NA} are removed before scoring. Default
+#'   \code{FALSE} returns \code{NA} if any input contains \code{NA}.
 #' @return \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
 #' @author Andreas Weigel, Federal Office of Meteorology and Climatology,
 #' MeteoSwiss, Zurich, Switzerland
@@ -24,7 +27,12 @@
 #'   fcst = cnrm.nino34.dm$fcst
 #'   afc.dm(obsv,fcst,4)
 #' @export afc.dm
-afc.dm = function(obsv,fcst,mf=3){
+afc.dm = function(obsv, fcst, mf=3, na.rm = FALSE) {
+  if (na.rm) {
+    d <- .complete_cases(obsv, fcst); obsv <- d$obsv; fcst <- d$fcst
+  } else if (anyNA(obsv) || anyNA(fcst)) {
+    return(NA_real_)
+  }
   n1 = sum(obsv)
   n0 = length(obsv)-sum(obsv)
   fcst.1 = fcst[which(obsv == 1)]

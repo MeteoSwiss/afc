@@ -2,8 +2,8 @@
 #' Forecasts
 #'
 #' Routine to calculate the Generalized Discrimination Score (aka
-#' Two-Alternatives Forced Choice Score 2AFC) for the situation of
-#' polychotomous observations (nominal) and polychotomous forecasts (nominal)
+#' Two-Alternatives Forced Choice Score 2AFC) for the situation of nominal
+#' polychotomous observations and polychotomous forecasts (nominal)
 #'
 #' This routine applies Eq.15 of Mason and Weigel (2009) to calculate the 2AFC.
 #'
@@ -11,6 +11,9 @@
 #' @param fcst vector of same length as \emph{obsv} with polychotomous
 #' forecasts (values in {1,..,m})
 #' @param m number of observation and forecast categories (default = 3)
+#' @param na.rm logical; if \code{TRUE} pairs where \code{obsv} or
+#'   \code{fcst} is \code{NA} are removed before scoring. Default
+#'   \code{FALSE} returns \code{NA} if any input contains \code{NA}.
 #' @return \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
 #' @author Andreas Weigel, Federal Office of Meteorology and Climatology,
 #' MeteoSwiss, Zurich, Switzerland
@@ -24,7 +27,12 @@
 #'   fcst = cnrm.nino34.mm$fcst
 #'   afc.nn(obsv,fcst,4)
 #' @export afc.nn
-afc.nn = function(obsv,fcst,m=3){
+afc.nn = function(obsv, fcst, m=3, na.rm = FALSE) {
+  if (na.rm) {
+    d <- .complete_cases(obsv, fcst); obsv <- d$obsv; fcst <- d$fcst
+  } else if (anyNA(obsv) || anyNA(fcst)) {
+    return(NA_real_)
+  }
   n.matrix = array(0,dim=c(m,m))
   for (nn in 1:m) for (mm in 1:m){
     n.matrix[nn,mm] = sum((obsv == nn) & (fcst == mm))

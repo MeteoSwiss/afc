@@ -4,13 +4,17 @@
 \alias{afc.dd}
 \title{2AFC For Dichotomous Observations And Dichotomous Forecasts}
 \usage{
-afc.dd(obsv, fcst)
+afc.dd(obsv, fcst, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{vector with dichotomous observations (values in {0,1})}
 
 \item{fcst}{vector of same length as \emph{obsv} with dichotomous forecasts
 (values in {0,1})}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }

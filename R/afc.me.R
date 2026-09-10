@@ -12,6 +12,9 @@
 #' @param fcst two-dimensional array with ensemble forecasts; dim(fcst)[1] =
 #' length(obsv); dim(fcst)[2] = ensemble size
 #' @param m number of observation categories (default = 3)
+#' @param na.rm logical; if \code{TRUE} pairs where \code{obsv} or
+#'   \code{fcst} is \code{NA} are removed before scoring. Default
+#'   \code{FALSE} returns \code{NA} if any input contains \code{NA}.
 #' @return \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
 #' @author Andreas Weigel, Federal Office of Meteorology and Climatology,
 #' MeteoSwiss, Zurich, Switzerland
@@ -25,7 +28,12 @@
 #'   fcst = cnrm.nino34.me$fcst
 #'   afc.me(obsv,fcst,4)
 #' @export afc.me
-afc.me = function(obsv,fcst,m=3){
+afc.me = function(obsv, fcst, m=3, na.rm = FALSE) {
+  if (na.rm) {
+    d <- .complete_cases(obsv, fcst); obsv <- d$obsv; fcst <- d$fcst
+  } else if (anyNA(obsv) || anyNA(fcst)) {
+    return(NA_real_)
+  }
   n.vector = rep(NA,m)
   for (k in 1:m){
     n.vector[k] = length(which(obsv == k))

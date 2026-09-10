@@ -4,10 +4,13 @@
 #' Two-Alternatives Forced Choice Score 2AFC) for the situation of dichotomous
 #' observations and continuous forecasts
 #'
-#' This routine applies Eq.8 of Mason and Weigel (2009) to calculate the 2AFC.
+#' This routine applies Eq.4 of Mason and Weigel (2009) to calculate the 2AFC.
 #'
 #' @param obsv vector with dichotomous observations (values in {0,1})
 #' @param fcst vector of same length as \emph{obsv} with real-valued forecasts
+#' @param na.rm logical; if \code{TRUE} pairs where \code{obsv} or
+#'   \code{fcst} is \code{NA} are removed before scoring. Default
+#'   \code{FALSE} returns \code{NA} if any input contains \code{NA}.
 #' @return \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
 #' @author Andreas Weigel, Federal Office of Meteorology and Climatology,
 #' MeteoSwiss, Zurich, Switzerland
@@ -21,7 +24,12 @@
 #'   fcst = cnrm.nino34.dc$fcst
 #'   afc.dc(obsv,fcst)
 #' @export afc.dc
-afc.dc= function(obsv,fcst){
+afc.dc = function(obsv, fcst, na.rm = FALSE) {
+  if (na.rm) {
+    d <- .complete_cases(obsv, fcst); obsv <- d$obsv; fcst <- d$fcst
+  } else if (anyNA(obsv) || anyNA(fcst)) {
+    return(NA_real_)
+  }
   event.index = which(obsv == 1)
   n1 = length(event.index)
   n0 = length(obsv)-n1

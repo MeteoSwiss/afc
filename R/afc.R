@@ -85,6 +85,9 @@
 #' @param m2 Number of forecast categories (only required if both obsv.type and
 #' fcst.type equal "m"). The number of observation categories is then specified
 #' by the argument \emph{m} above.
+#' @param na.rm logical; if \code{TRUE} pairs where \code{obsv} or
+#'   \code{fcst} is \code{NA} are removed before scoring. Default
+#'   \code{FALSE} returns \code{NA} if any input contains \code{NA}.
 #' @return \item{ p.afc }{ Value of Generalized Discrimination Score (2AFC) }
 #' @author Andreas Weigel, Federal Office of Meteorology and Climatology,
 #' MeteoSwiss, Zurich, Switzerland
@@ -162,7 +165,11 @@
 #'   fcst = cnrm.nino34.ce$fcst
 #'   afc(obsv, fcst, obsv.type="c", fcst.type="e")
 #' @export afc
-afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
+afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0,na.rm=FALSE){
+
+  if (na.rm) {
+    d <- .complete_cases(obsv, fcst); obsv <- d$obsv; fcst <- d$fcst
+  }
 
   type.ok.flag = 0
 
@@ -175,7 +182,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("observations can only have values 1 and 0")
     if (length(which(fcst != 0 & fcst != 1)) > 0)
       stop("forecasts can only have values 1 and 0")
-    afc.score = afc.dd(obsv,fcst)
+    afc.score = afc.dd(obsv,fcst,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -189,7 +196,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("observations can only have values 1 and 0")
     if (length(which(!(fcst %in% 1:m))) > 0)
       stop("forecasts can only have values [1,2,...,m]")
-    afc.score = afc.dm(obsv,fcst,m)
+    afc.score = afc.dm(obsv,fcst,m,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -202,7 +209,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("observations can only have values 1 and 0")
     if (length(which(fcst < 0 | fcst > 1)) > 0)
       stop("forecasts must be probabilities, i.e. values between 0 and 1")
-    afc.score = afc.dp(obsv,fcst)
+    afc.score = afc.dp(obsv,fcst,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -213,7 +220,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("observations and forecasts must have same length")
     if (length(which(obsv != 0 & obsv != 1)) > 0)
       stop("observations can only have values 1 and 0")
-    afc.score = afc.dc(obsv,fcst)
+    afc.score = afc.dc(obsv,fcst,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -226,7 +233,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("forecasts must be array with dimensions length(obsv) x ens.size")
     if (dim(fcst)[1] != length(obsv))
       stop("number of forecasts must be equal to number of observations")
-    afc.score = afc.de(obsv,fcst)
+    afc.score = afc.de(obsv,fcst,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -240,7 +247,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("observations can only have values [1,2,...,mv]")
     if (length(which(!(obsv %in% 1:m2))) > 0)
       stop("forecasts can only have values [1,2,...,mf]")
-    afc.score = afc.mm(obsv,fcst,m,m2)
+    afc.score = afc.mm(obsv,fcst,m,m2,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -252,7 +259,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("observations and forecasts must have same length")
     if ( (length(which(!(obsv %in% 1:m))) > 0) | (length(which(!(fcst %in% 1:m))) > 0) )
       stop("observations/forecasts can only have values [1,2,...,m]")
-    afc.score = afc.nn(obsv,fcst,m)
+    afc.score = afc.nn(obsv,fcst,m,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -270,7 +277,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("forecasts must be probabilities, i.e. values between 0 and 1")
     if (length(which(!(obsv %in% 1:m))) > 0)
       stop("observations can only have values [1,2,...,m]")
-    afc.score = afc.mp(obsv,fcst,m)
+    afc.score = afc.mp(obsv,fcst,m,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -288,7 +295,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("forecasts must be probabilities, i.e. values between 0 and 1")
     if (length(which(!(obsv %in% 1:m))) > 0)
       stop("observations can only have values [1,2,...,m]")
-    afc.score = afc.np(obsv,fcst,m)
+    afc.score = afc.np(obsv,fcst,m,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -300,7 +307,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("observations and forecasts must have same length")
     if (length(which(!(obsv %in% 1:m))) > 0)
       stop("observations can only have values [1,2,...,m]")
-    afc.score = afc.mc(obsv,fcst,m)
+    afc.score = afc.mc(obsv,fcst,m,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -314,7 +321,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("forecasts must be array with dimensions length(obsv) x ens.size")
     if (dim(fcst)[1] != length(obsv))
       stop("number of forecasts must be equal to number of observations")
-    afc.score = afc.me(obsv,fcst,m)
+    afc.score = afc.me(obsv,fcst,m,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -323,7 +330,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("observations / forecasts must be vectors")
     if (length(obsv) != length(fcst))
       stop("observations and forecasts must have same length")
-    afc.score = afc.cc(obsv,fcst)
+    afc.score = afc.cc(obsv,fcst,na.rm=na.rm)
     type.ok.flag = 1
   }
 
@@ -334,7 +341,7 @@ afc = function(obsv,fcst,obsv.type,fcst.type,m=0,m2=0){
       stop("forecasts must be array with dimensions length(obsv) x ens.size")
     if (dim(fcst)[1] != length(obsv))
       stop("number of forecasts must be equal to number of observations")
-    afc.score = afc.ce(obsv,fcst)
+    afc.score = afc.ce(obsv,fcst,na.rm=na.rm)
     type.ok.flag = 1
   }
 

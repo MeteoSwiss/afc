@@ -12,6 +12,9 @@
 #' forecasts (values in {1,..,mf})
 #' @param mv number of observation categories (default = 3)
 #' @param mf number of forecast categories (default = 3)
+#' @param na.rm logical; if \code{TRUE} pairs where \code{obsv} or
+#'   \code{fcst} is \code{NA} are removed before scoring. Default
+#'   \code{FALSE} returns \code{NA} if any input contains \code{NA}.
 #' @return \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
 #' @author Andreas Weigel, Federal Office of Meteorology and Climatology,
 #' MeteoSwiss, Zurich, Switzerland
@@ -25,7 +28,12 @@
 #'   fcst = cnrm.nino34.mm$fcst
 #'   afc.mm(obsv,fcst,4,4)
 #' @export afc.mm
-afc.mm = function(obsv,fcst,mv=3,mf=3){
+afc.mm = function(obsv, fcst, mv=3, mf=3, na.rm = FALSE) {
+  if (na.rm) {
+    d <- .complete_cases(obsv, fcst); obsv <- d$obsv; fcst <- d$fcst
+  } else if (anyNA(obsv) || anyNA(fcst)) {
+    return(NA_real_)
+  }
   if (mf == 0) mf=mv
   n.matrix = array(0,dim=c(mv,mf))
   for (nn in 1:mv) for (mm in 1:mf){

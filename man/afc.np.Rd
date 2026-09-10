@@ -2,17 +2,21 @@
 % Please edit documentation in R/afc.np.R
 \name{afc.np}
 \alias{afc.np}
-\title{2AFC For Nominal Polychotomous Observations Ans Probabilistic Forecasts}
+\title{2AFC For Nominal Polychotomous Observations And Probabilistic Forecasts}
 \usage{
-afc.np(obsv, fcst, m = 3)
+afc.np(obsv, fcst, m = 3, na.rm = FALSE)
 }
 \arguments{
-\item{obsv}{vector with dichotomous observations (values in {0,1})}
+\item{obsv}{vector with polychotomous observations (values in {1,..,m})}
 
 \item{fcst}{two-dimensional array with forecast probabilities for the m
 categories; dim(fcst)[1] = length(obsv); dim(fcst)[2] = m}
 
 \item{m}{number of observation categories (default = 3)}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }

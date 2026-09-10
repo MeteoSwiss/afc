@@ -4,7 +4,7 @@
 \alias{afc}
 \title{Calculate Generalized Discrimination Score 2AFC}
 \usage{
-afc(obsv, fcst, obsv.type, fcst.type, m = 0, m2 = 0)
+afc(obsv, fcst, obsv.type, fcst.type, m = 0, m2 = 0, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{Vector of observations. The required format depends on the
@@ -28,6 +28,10 @@ obsv.type or fcst.type equals "m" or "n")}
 \item{m2}{Number of forecast categories (only required if both obsv.type and
 fcst.type equal "m"). The number of observation categories is then specified
 by the argument \emph{m} above.}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination Score (2AFC) }

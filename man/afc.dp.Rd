@@ -4,13 +4,17 @@
 \alias{afc.dp}
 \title{2AFC For Dichotomous Observations And Probabilistic Forecasts}
 \usage{
-afc.dp(obsv, fcst)
+afc.dp(obsv, fcst, na.rm = FALSE)
 }
 \arguments{
 \item{obsv}{vector with dichotomous observations (values in {0,1})}
 
 \item{fcst}{vector of same length as \emph{obsv} with forecast probabilities
 for the event to happen}
+
+\item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
+\code{fcst} is \code{NA} are removed before scoring. Default
+\code{FALSE} returns \code{NA} if any input contains \code{NA}.}
 }
 \value{
 \item{ p.afc }{ Value of Generalized Discrimination (2AFC) Score }
@@ -18,10 +22,10 @@ for the event to happen}
 \description{
 Routine to calculate the Generalized Discrimination Score (aka
 Two-Alternatives Forced Choice Score 2AFC) for the situation of dichotomous
-observations and discrete probabilistic forecasts
+observations and probabilistic forecasts
 }
 \details{
-This routine applies Eq.5 of Mason and Weigel (2009) to calculate the 2AFC.
+This routine applies Eq.3 of Mason and Weigel (2009) to calculate the 2AFC.
 }
 \examples{
   data(cnrm.nino34.dp)
