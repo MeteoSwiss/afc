@@ -7,10 +7,10 @@
 \format{
 A data frame with 40 rows and 3 columns:
 \describe{
-\item{years}{integer, year of observation (1961-2000)}
-\item{obsv}{integer, dichotomous observations (0/1; event defined as
-  Nino-3.4 index >= 27 C)}
-\item{fcst}{numeric, continuous forecasts of Nino-3.4 index (degrees C)}
+  \item{years}{integer, year of observation (1961-2000)}
+  \item{obsv}{integer, dichotomous observations
+    (0/1; event defined as Nino-3.4 index >= 27 C)}
+  \item{fcst}{numeric, continuous forecasts of Nino-3.4 index (degrees C)}
 }
 }
 \description{

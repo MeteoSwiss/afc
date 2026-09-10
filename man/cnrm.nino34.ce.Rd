@@ -7,10 +7,10 @@
 \format{
 A data frame with 40 rows and 3 columns:
 \describe{
-\item{years}{integer, year of observation (1961-2000)}
-\item{obsv}{numeric, continuous observations of Nino-3.4 index (degrees C)}
-\item{fcst}{numeric matrix [40 x 9], 9-member ensemble forecasts of
-  Nino-3.4 index (degrees C)}
+  \item{years}{integer, year of observation (1961-2000)}
+  \item{obsv}{numeric, continuous observations of Nino-3.4 index (degrees C)}
+  \item{fcst}{numeric matrix [40 x 9], 9-member ensemble forecasts
+    of Nino-3.4 index (degrees C)}
 }
 }
 \description{
