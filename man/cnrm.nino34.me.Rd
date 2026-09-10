@@ -5,9 +5,14 @@
 \alias{cnrm.nino34.me}
 \title{Example Data of Polychotomous Observations and Ensembles Forecasts}
 \format{
-The format is:\cr List of 3\cr \$ years: int [1:40] 1961 1962 1963
-1964 1965 1966 1967 1968 1969 1970 ...\cr \$ obsv : num [1:40] 2 2 1 3 1 3 2
-1 3 3 ...\cr \$ fcst : num [1:40, 1:9] 26.5 25.9 27.0 27.5 25.8 ...\cr
+A data frame with 40 rows and 3 columns:
+\describe{
+  \item{years}{integer, year of observation (1961-2000)}
+  \item{obsv}{integer, polychotomous observations
+    (categories 1-4; (1) < 26 C; (2) 26-27 C; (3) 27-28 C; (4) >= 28 C)}
+  \item{fcst}{numeric matrix [40 x 9], 9-member ensemble forecasts
+    of Nino-3.4 index (degrees C)}
+}
 }
 \description{
 Polychotomous observations with four categories (obsv) and 9-member ensemble

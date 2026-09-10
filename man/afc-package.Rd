@@ -18,7 +18,7 @@ Mason and Weigel (2009).
 The master routine is \code{\link{afc}}. For a given set of observation and
 forecast data, and for a specified verification context, \code{\link{afc}}
 calls the appropriate functions which are necessary to calculate the 2AFC
-score. 
+score.
 
 Why the 2AFC-score? There are numerous reasons for calculating forecast
 verification scores, and considerable attention has been given to designing
@@ -42,11 +42,11 @@ discrete.
 2010-01-07\cr License: \tab GPL-2\cr }
 }
 \section{Index}{
- 
+
 \preformatted{
 afc                     Calculate Generalized Discrimination Score 2AFC
 afc-package             Generalized Discrimination Score 2AFC
-afc.cc                  2AFC For Continuous Observations And Continuous 
+afc.cc                  2AFC For Continuous Observations And Continuous
                         Forecasts
 afc.ce                  2AFC For Ordinal Polychotomous Observations And
                         Ensemble Forecasts
@@ -74,7 +74,7 @@ afc.np                  2AFC For Nominal Polychotomous Observations And
                         Probabilistic Forecasts
 cnrm.nino34.cc          Example Data of Continuous Observations and
                         Continuous Forecasts
-cnrm.nino34.ce          Example Data of Continuous Observations and 
+cnrm.nino34.ce          Example Data of Continuous Observations and
                         Ensemble Forecasts
 cnrm.nino34.dc          Example Data of Dichotomous Observations and
                         Continuous Forecasts

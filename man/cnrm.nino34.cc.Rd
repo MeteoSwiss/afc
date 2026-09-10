@@ -5,9 +5,12 @@
 \alias{cnrm.nino34.cc}
 \title{Example Data of Continuous Observations and Continuous Forecasts}
 \format{
-The format is:\cr List of 3\cr \$ years: int [1:40] 1961 1962 1963
-1964 1965 1966 1967 1968 1969 1970 ...\cr \$ obsv : num [1:40] 26.2 26.2
-25.9 27.4 25.8 ...\cr \$ fcst : num [1:40] 26.5 26.3 26.6 27.7 25.8 ...
+A data frame with 40 rows and 3 columns:
+\describe{
+  \item{years}{integer, year of observation (1961-2000)}
+  \item{obsv}{numeric, continuous observations of Nino-3.4 index (degrees C)}
+  \item{fcst}{numeric, continuous forecasts of Nino-3.4 index (degrees C)}
+}
 }
 \description{
 Continuous observations (obsv) and continuous forecasts (fcst) of the
