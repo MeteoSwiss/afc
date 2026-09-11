@@ -74,52 +74,52 @@ function(s) to calculate the 2AFC score. The following combinations of
 the input data *obsv* and *fcst* depends on the verification context:  
 
 \(1\) "d-d":  
-*obsv*: vector with dichotomous observations (values in 0,1)  
+*obsv*: vector with dichotomous observations (values in {0,1})  
 *fcst*: vector of same length as *obsv* with dichotomous forecasts
-(values in 0,1)  
+(values in {0,1})  
 
 \(2\) "d-m":  
-*obsv*: vector with dichotomous observations (values in 0,1)  
+*obsv*: vector with dichotomous observations (values in {0,1})  
 *fcst*: vector of same length as *obsv* with polychotomous forecasts
-(values in 1,..,m)  
+(values in {1,..,m})  
 
 \(3\) "d-p":  
-*obsv*: vector with dichotomous observations (values in 0,1)  
+*obsv*: vector with dichotomous observations (values in {0,1})  
 *fcst*: vector of same length as *obsv* with forecast probabilities for
 the event to happen  
 
 \(4\) "d-c":  
-*obsv*: vector with dichotomous observations (values in 0,1)  
+*obsv*: vector with dichotomous observations (values in {0,1})  
 *fcst*: vector of same length as *obsv* with real-valued forecasts  
 
 \(5\) "d-e":  
-*obsv*: vector with dichotomous observations (values in 0,1)  
+*obsv*: vector with dichotomous observations (values in {0,1})  
 *fcst*: two-dimensional array with ensemble forecasts; dim(fcst)\[1\] =
 length(obsv); dim(fcst)\[2\] = ensemble size.  
 
 \(6\) "m-m":  
-*obsv*: vector with polychotomous observations (values in 1,..,m)  
+*obsv*: vector with polychotomous observations (values in {1,..,m})  
 *fcst*: vector of same length as *obsv* with polychotomous forecasts
-(values in 1,..,m2)  
+(values in {1,..,m2})  
 
 \(7\) "m-p":  
-*obsv*: vector with polychotomous observations (values in 1,..,m)  
+*obsv*: vector with polychotomous observations (values in {1,..,m})  
 *fcst*: two-dimensional array with forecast probabilities for the m
 categories; dim(fcst)\[1\] = length(obsv); dim(fcst)\[2\] = m  
 
 \(8\) "m-c":  
-*obsv*: vector with polychotomous observations (values in 1,..,m)  
+*obsv*: vector with polychotomous observations (values in {1,..,m})  
 *fcst*: vector of same length as *obsv* with real-valued forecasts  
 
 \(9\) "m-e":  
-*obsv*: vector with polychotomous observations (values in 1,..,m)  
+*obsv*: vector with polychotomous observations (values in {1,..,m})  
 *fcst*: two-dimensional array with ensemble forecasts; dim(fcst)\[1\] =
 length(obsv); dim(fcst)\[2\] = ensemble size.  
 
 \(10\) "n-n":  
-*obsv*: vector with polychotomous observations (values in 1,..,m)  
+*obsv*: vector with polychotomous observations (values in {1,..,m})  
 *fcst*: vector of same length as *obsv* with polychotomous forecasts
-(values in 1,..,m)  
+(values in {1,..,m})  
 
 \(11\) "n-p":  
 Same as "m-p".  

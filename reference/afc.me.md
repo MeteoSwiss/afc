@@ -14,7 +14,7 @@ afc.me(obsv, fcst, m = 3, na.rm = FALSE)
 
 - obsv:
 
-  vector with polychotomous observations (values in 1,..,m)
+  vector with polychotomous observations (values in {1,..,m})
 
 - fcst:
 

@@ -10,13 +10,16 @@
 
 ## Citation
 
+Source:
+[`DESCRIPTION`](https://github.com/MeteoSwiss/afc/blob/main/DESCRIPTION)
+
 Weigel A, Bhend J (2026). *afc: Generalized Discrimination Score*. R
-package version 1.2.0, <https://meteoswiss.github.io/afc/>.
+package version 1.5.0, <https://meteoswiss.github.io/afc/>.
 
     @Manual{,
       title = {afc: Generalized Discrimination Score},
       author = {Andreas Weigel and Jonas Bhend},
       year = {2026},
-      note = {R package version 1.2.0},
+      note = {R package version 1.5.0},
       url = {https://meteoswiss.github.io/afc/},
     }

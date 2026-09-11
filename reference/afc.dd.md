@@ -14,12 +14,12 @@ afc.dd(obsv, fcst, na.rm = FALSE)
 
 - obsv:
 
-  vector with dichotomous observations (values in 0,1)
+  vector with dichotomous observations (values in {0,1})
 
 - fcst:
 
   vector of same length as *obsv* with dichotomous forecasts (values in
-  0,1)
+  {0,1})
 
 - na.rm:
 

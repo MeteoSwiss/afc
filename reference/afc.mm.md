@@ -15,12 +15,12 @@ afc.mm(obsv, fcst, mv = 3, mf = 3, na.rm = FALSE)
 
 - obsv:
 
-  vector with polychotomous observations (values in 1,..,mv)
+  vector with polychotomous observations (values in {1,..,mv})
 
 - fcst:
 
   vector of same length as *obsv* with polychotomous forecasts (values
-  in 1,..,mf)
+  in {1,..,mf})
 
 - mv:
 

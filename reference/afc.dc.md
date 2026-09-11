@@ -14,7 +14,7 @@ afc.dc(obsv, fcst, na.rm = FALSE)
 
 - obsv:
 
-  vector with dichotomous observations (values in 0,1)
+  vector with dichotomous observations (values in {0,1})
 
 - fcst:
 
