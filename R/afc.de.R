@@ -8,7 +8,7 @@
 #' \code{\link{rank.ensembles}}) and then calculates the 2AFC-score with Eq.2
 #' of Mason and Weigel (2009).
 #'
-#' @param obsv vector with dichotomous observations (values in {0,1})
+#' @param obsv vector with dichotomous observations (values in \{0,1\})
 #' @param fcst two-dimensional array with ensemble forecasts; dim(fcst)[1] =
 #' length(obsv); dim(fcst)[2] = ensemble size
 #' @param na.rm logical; if \code{TRUE} pairs where \code{obsv} or

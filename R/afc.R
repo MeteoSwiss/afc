@@ -19,45 +19,45 @@
 #' context:\cr
 #'
 #' (1) "d-d": \cr \emph{obsv}: vector with dichotomous observations (values in
-#' {0,1})\cr \emph{fcst}: vector of same length as \emph{obsv} with dichotomous
-#' forecasts (values in {0,1}) \cr
+#' \{0,1\})\cr \emph{fcst}: vector of same length as \emph{obsv} with dichotomous
+#' forecasts (values in \{0,1\}) \cr
 #'
 #' (2) "d-m": \cr \emph{obsv}: vector with dichotomous observations (values in
-#' {0,1})\cr \emph{fcst}: vector of same length as \emph{obsv} with
-#' polychotomous forecasts (values in {1,..,m}) \cr
+#' \{0,1\})\cr \emph{fcst}: vector of same length as \emph{obsv} with
+#' polychotomous forecasts (values in \{1,..,m\}) \cr
 #'
 #' (3) "d-p": \cr \emph{obsv}: vector with dichotomous observations (values in
-#' {0,1})\cr \emph{fcst}: vector of same length as \emph{obsv} with forecast
+#' \{0,1\})\cr \emph{fcst}: vector of same length as \emph{obsv} with forecast
 #' probabilities for the event to happen \cr
 #'
 #' (4) "d-c": \cr \emph{obsv}: vector with dichotomous observations (values in
-#' {0,1})\cr \emph{fcst}: vector of same length as \emph{obsv} with real-valued
+#' \{0,1\})\cr \emph{fcst}: vector of same length as \emph{obsv} with real-valued
 #' forecasts \cr
 #'
 #' (5) "d-e": \cr \emph{obsv}: vector with dichotomous observations (values in
-#' {0,1})\cr \emph{fcst}: two-dimensional array with ensemble forecasts;
+#' \{0,1\})\cr \emph{fcst}: two-dimensional array with ensemble forecasts;
 #' dim(fcst)[1] = length(obsv); dim(fcst)[2] = ensemble size.\cr
 #'
 #' (6) "m-m": \cr \emph{obsv}: vector with polychotomous observations (values
-#' in {1,..,m})\cr \emph{fcst}: vector of same length as \emph{obsv} with
-#' polychotomous forecasts (values in {1,..,m2}) \cr
+#' in \{1,..,m\})\cr \emph{fcst}: vector of same length as \emph{obsv} with
+#' polychotomous forecasts (values in \{1,..,m2\}) \cr
 #'
 #' (7) "m-p": \cr \emph{obsv}: vector with polychotomous observations (values
-#' in {1,..,m})\cr \emph{fcst}: two-dimensional array with forecast
+#' in \{1,..,m\})\cr \emph{fcst}: two-dimensional array with forecast
 #' probabilities for the m categories; dim(fcst)[1] = length(obsv);
 #' dim(fcst)[2] = m \cr
 #'
 #' (8) "m-c": \cr \emph{obsv}: vector with polychotomous observations (values
-#' in {1,..,m})\cr \emph{fcst}: vector of same length as \emph{obsv} with
+#' in \{1,..,m\})\cr \emph{fcst}: vector of same length as \emph{obsv} with
 #' real-valued forecasts \cr
 #'
 #' (9) "m-e": \cr \emph{obsv}: vector with polychotomous observations (values
-#' in {1,..,m})\cr \emph{fcst}: two-dimensional array with ensemble forecasts;
+#' in \{1,..,m\})\cr \emph{fcst}: two-dimensional array with ensemble forecasts;
 #' dim(fcst)[1] = length(obsv); dim(fcst)[2] = ensemble size.\cr
 #'
 #' (10) "n-n": \cr \emph{obsv}: vector with polychotomous observations (values
-#' in {1,..,m})\cr \emph{fcst}: vector of same length as \emph{obsv} with
-#' polychotomous forecasts (values in {1,..,m}) \cr
+#' in \{1,..,m\})\cr \emph{fcst}: vector of same length as \emph{obsv} with
+#' polychotomous forecasts (values in \{1,..,m\}) \cr
 #'
 #' (11) "n-p": \cr Same as "m-p".\cr
 #'

@@ -7,7 +7,7 @@
 afc.mc(obsv, fcst, m = 3, na.rm = FALSE)
 }
 \arguments{
-\item{obsv}{vector with polychotomous observations (values in {1,..,m})}
+\item{obsv}{vector with polychotomous observations (values in \{1,..,m\})}
 
 \item{fcst}{vector of same length as \emph{obsv} with real-valued forecasts}
 

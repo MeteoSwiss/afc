@@ -8,7 +8,7 @@
 #' \code{\link{rank.ensembles}}) and then calculates the 2AFC-score with Eq.18
 #' of Mason and Weigel (2009).
 #'
-#' @param obsv vector with polychotomous observations (values in {1,..,m})
+#' @param obsv vector with polychotomous observations (values in \{1,..,m\})
 #' @param fcst two-dimensional array with ensemble forecasts; dim(fcst)[1] =
 #' length(obsv); dim(fcst)[2] = ensemble size
 #' @param m number of observation categories (default = 3)

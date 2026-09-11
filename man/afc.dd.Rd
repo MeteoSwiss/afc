@@ -7,10 +7,10 @@
 afc.dd(obsv, fcst, na.rm = FALSE)
 }
 \arguments{
-\item{obsv}{vector with dichotomous observations (values in {0,1})}
+\item{obsv}{vector with dichotomous observations (values in \{0,1\})}
 
 \item{fcst}{vector of same length as \emph{obsv} with dichotomous forecasts
-(values in {0,1})}
+(values in \{0,1\})}
 
 \item{na.rm}{logical; if \code{TRUE} pairs where \code{obsv} or
 \code{fcst} is \code{NA} are removed before scoring. Default

@@ -1,5 +1,5 @@
 Package: afc
-Version: 1.2.0
+Version: 1.5.0
 Date: 2026-09-08
 Title: Generalized Discrimination Score
 Authors@R: c(person("Andreas", "Weigel", email="", role = "aut"),
@@ -13,10 +13,12 @@ Description: This is an implementation of the Generalized Discrimination Score
     polychotomous (ordinal and nominal), continuous, probabilistic, and ensemble.
     A comprehensive description of the Generalized Discrimination Score, including 
     all equations used in this package, is provided by Mason and Weigel (2009).
-License: BSD_3_clause + file LICENSE
+License: GPL (>= 3)
 RoxygenNote: 7.2.3
+Depends: R (>= 3.5.0)
 URL: https://meteoswiss.github.io/afc/
 Encoding: UTF-8
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+BugReports: https://github.com/MeteoSwiss/afc/issues

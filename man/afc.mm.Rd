@@ -8,10 +8,10 @@ Forecasts}
 afc.mm(obsv, fcst, mv = 3, mf = 3, na.rm = FALSE)
 }
 \arguments{
-\item{obsv}{vector with polychotomous observations (values in {1,..,mv})}
+\item{obsv}{vector with polychotomous observations (values in \{1,..,mv\})}
 
 \item{fcst}{vector of same length as \emph{obsv} with polychotomous
-forecasts (values in {1,..,mf})}
+forecasts (values in \{1,..,mf\})}
 
 \item{mv}{number of observation categories (default = 3)}
 

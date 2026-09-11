@@ -6,7 +6,7 @@
 #'
 #' This routine applies Eq.17 of Mason and Weigel (2009) to calculate the 2AFC.
 #'
-#' @param obsv vector with polychotomous observations (values in {1,..,m})
+#' @param obsv vector with polychotomous observations (values in \{1,..,m\})
 #' @param fcst two-dimensional array with forecast probabilities for the m
 #' categories; dim(fcst)[1] = length(obsv); dim(fcst)[2] = m
 #' @param m number of observation categories (default = 3)

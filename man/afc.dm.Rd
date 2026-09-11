@@ -7,10 +7,10 @@
 afc.dm(obsv, fcst, mf = 3, na.rm = FALSE)
 }
 \arguments{
-\item{obsv}{vector with dichotomous observations (values in {0,1})}
+\item{obsv}{vector with dichotomous observations (values in \{0,1\})}
 
 \item{fcst}{vector of same length as \emph{obsv} with polychotomous
-forecasts (values in {1,..,m})}
+forecasts (values in \{1,..,m\})}
 
 \item{mf}{number of forecast categories (default = 3)}
 

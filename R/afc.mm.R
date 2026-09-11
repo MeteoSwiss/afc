@@ -7,9 +7,9 @@
 #'
 #' This routine applies Eq.14 of Mason and Weigel (2009) to calculate the 2AFC.
 #'
-#' @param obsv vector with polychotomous observations (values in {1,..,mv})
+#' @param obsv vector with polychotomous observations (values in \{1,..,mv\})
 #' @param fcst vector of same length as \emph{obsv} with polychotomous
-#' forecasts (values in {1,..,mf})
+#' forecasts (values in \{1,..,mf\})
 #' @param mv number of observation categories (default = 3)
 #' @param mf number of forecast categories (default = 3)
 #' @param na.rm logical; if \code{TRUE} pairs where \code{obsv} or

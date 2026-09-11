@@ -10,3 +10,4 @@
 ^data-raw$
 ^LICENSE\.md$
 ^AUTHORS$
+^cran-comments\.md$
